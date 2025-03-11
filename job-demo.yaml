@@ -1,0 +1,16 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: demo-job
+spec:
+  ttlIntervalAfterFinished: 30
+  template:
+    metadata:
+      app: demo
+    spec:
+      containers:
+      - image: alpine
+        name: demo-job
+        command: ['/bin/sh']
+        args: ['-c', [echo "Just Job Testing"]]
+      restartPolicy: Never
