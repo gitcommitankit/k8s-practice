@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Deployment
+metadata:
+    name: test-deploy
+    labels:
+        deploy_env: test
+        product: finance
+spec:
+    replica: 2
+    selector:
+        matchLabels:
+            product: finance
+    template:
+        metadata:
+            name: nginx-demo
+            labels:
+                app: finance-report
+                product: finance
+        spec:
+            containers:
+              - image:  nginx:1.27
+                name:  nginx
