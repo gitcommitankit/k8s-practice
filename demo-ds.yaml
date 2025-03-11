@@ -6,7 +6,7 @@ metadata:
         deploy_env: test
         product: finance
 spec:
-    replica: 2
+    replicas: 2
     selector:
         matchLabels:
             product: finance
