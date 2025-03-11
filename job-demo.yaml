@@ -4,6 +4,7 @@ metadata:
   name: demo-job
 spec:
   ttlSecondsAfterFinished: 180
+  backoffLimit: 4
   template:
     spec:
       containers:
@@ -11,4 +12,4 @@ spec:
         name: demo-job
         command: ['/bin/sh']
         args: ['-c', 'echo "Hello"']
-      restartPolicy: Never
+      restartPolicy: Always
