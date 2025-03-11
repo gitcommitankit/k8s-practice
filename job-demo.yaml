@@ -3,7 +3,7 @@ kind: Job
 metadata:
   name: demo-job
 spec:
-  ttlSecondsAfterFinished: 30
+  ttlSecondsAfterFinished: 180
   template:
     spec:
       containers:
