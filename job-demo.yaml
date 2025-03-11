@@ -10,5 +10,5 @@ spec:
       - image: alpine
         name: demo-job
         command: ['/bin/sh']
-        args: ['-c', "echo 'Just Job Testing'"]
+        args: ['ls -l demo']
       restartPolicy: Never
